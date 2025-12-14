@@ -1,26 +1,4 @@
-# Test Project
+# Overview
 
-This is python"
-
-```python
-assert 2==2
-```
-
-```bash
-echo "Bash Running"
-ls -la
-```
-
-```bash
-mkdir new_folder
-cd new_folder
-```
-
-```bash
-python -m venv env
-source env/bin/activate
-```
-
-```bash
-pip install ultralytics
-```
+Have you ever had to run all the bash codes from Github README manually?
+Well, use this module that will run all the bash, python code that are present in your README to run the projet smoothly.
