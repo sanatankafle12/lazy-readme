@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "lazy-readme"
+version = "0.1.0"
+description = "A pytest plugin that ensures your README code examples actually work."
+readme = "README.md"
+authors = [{name = "sanatankalfe", email = "kaflesanatan100@gmail.com"}]
+dependencies = [
+    "pytest>=7.0.0"
+]
+# THIS IS THE KEY PART:
+[project.entry-points.pytest11]
+lazy_readme = "lazy_readme.plugin"
+[tool.hatch.build.targets.wheel]
+packages = ["src/lazy_readme"]
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "env1",
+  "venv",
+  ".pytest_cache",
+  "__pycache__"
+]
